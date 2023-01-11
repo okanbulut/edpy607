@@ -1,0 +1,10 @@
+tab:irt1
+introduction
+course-content
+chapters
+construct-validation
+factor-analytic-methods
+principal-component-analysis-pca
+advanced-irt-applications
+digital-testing-applications
+other-topics-in-computational-psychometrics
