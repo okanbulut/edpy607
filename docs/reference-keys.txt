@@ -5,6 +5,7 @@ chapters
 construct-validation
 factor-analytic-methods
 principal-component-analysis-pca
+psychometric-network-analysis
 advanced-irt-applications
 digital-testing-applications
 other-topics-in-computational-psychometrics

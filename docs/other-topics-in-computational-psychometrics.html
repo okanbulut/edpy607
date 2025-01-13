@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Other Topics in Computational Psychometrics | EDPY 607 – Measurement Theory II</title>
   <meta name="description" content="This document includes the course notes for EDPY 607 - Measurement Theory II." />
-  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Other Topics in Computational Psychometrics | EDPY 607 – Measurement Theory II" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2023-01-11" />
+<meta name="date" content="2025-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,7 +59,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -69,7 +69,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -123,10 +123,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 <style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -173,6 +178,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="construct-validation.html"><a href="construct-validation.html#example-1-synthetic-aperture-personality-assessment"><i class="fa fa-check"></i>Example 1: Synthetic Aperture Personality Assessment</a></li>
 <li class="chapter" data-level="" data-path="construct-validation.html"><a href="construct-validation.html#example-2-financial-well-being-scale"><i class="fa fa-check"></i>Example 2: Financial Well-Being Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="2.2" data-path="construct-validation.html"><a href="construct-validation.html#psychometric-network-analysis"><i class="fa fa-check"></i><b>2.2</b> Psychometric Network Analysis</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="advanced-irt-applications.html"><a href="advanced-irt-applications.html"><i class="fa fa-check"></i><b>3</b> Advanced IRT Applications</a></li>
 <li class="chapter" data-level="4" data-path="digital-testing-applications.html"><a href="digital-testing-applications.html"><i class="fa fa-check"></i><b>4</b> Digital Testing Applications</a></li>
@@ -201,41 +207,39 @@ div.csl-indent {
 <h1><span class="header-section-number">5</span> Other Topics in Computational Psychometrics<a href="other-topics-in-computational-psychometrics.html#other-topics-in-computational-psychometrics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This chapter will focus on additional topics in computational psychometrics.</p>
 
-<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
 <div class="csl-entry">
-Chalmers, P. (2022). <em>Mirt: Multidimensional item response theory</em>. <a href="https://CRAN.R-project.org/package=mirt">https://CRAN.R-project.org/package=mirt</a>
+Chalmers, P. (2024). <em>Mirt: Multidimensional item response theory</em>. <a href="https://philchalmers.github.io/mirt/">https://philchalmers.github.io/mirt/</a>
 </div>
 <div class="csl-entry">
 Condon, D. M., &amp; Revelle, W. (2014). The international cognitive ability resource: Development and initial validation of a public-domain measure. <em>Intelligence</em>, <em>43</em>, 52–64.
 </div>
 <div class="csl-entry">
-Cui, B. (2020). <em>DataExplorer: Automate data exploration and treatment</em>. <a href="http://boxuancui.github.io/DataExplorer/">http://boxuancui.github.io/DataExplorer/</a>
+Cui, B. (2024). <em>DataExplorer: Automate data exploration and treatment</em>. <a href="http://boxuancui.github.io/DataExplorer/">http://boxuancui.github.io/DataExplorer/</a>
 </div>
 <div class="csl-entry">
 Hu, L., &amp; Bentler, P. M. (1999). Cutoff criteria for fit indexes in covariance structure analysis: Conventional criteria versus new alternatives. <em>Structural Equation Modeling: A Multidisciplinary Journal</em>, <em>6</em>(1), 1–55.
 </div>
 <div class="csl-entry">
-Kassambara, A. (2022). <em>Ggcorrplot: Visualization of a correlation matrix using ggplot2</em>. <a href="http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2">http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2</a>
+Kassambara, A. (2023). <em>Ggcorrplot: Visualization of a correlation matrix using ggplot2</em>. <a href="http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2">http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2</a>
 </div>
 <div class="csl-entry">
 Maydeu-Olivares, A., &amp; Coffman, D. L. (2006). Random intercept item factor analysis. <em>Psychological Methods</em>, <em>11</em>(4), 344.
 </div>
 <div class="csl-entry">
-R Core Team. (2022). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
+R Core Team. (2024). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
 </div>
 <div class="csl-entry">
-Revelle, W. (2022). <em>Psych: Procedures for psychological, psychometric, and personality research</em>. <a href="https://personality-project.org/r/psych/
-https://personality-project.org/r/psych-manual.pdf">https://personality-project.org/r/psych/
-https://personality-project.org/r/psych-manual.pdf</a>
+Revelle, W. (2024). <em>Psych: Procedures for psychological, psychometric, and personality research</em>. <a href="https://personality-project.org/r/psych/">https://personality-project.org/r/psych/</a>
 </div>
 <div class="csl-entry">
 Revelle, W., Wilt, J., &amp; Rosenthal, A. (2010). Individual differences in cognition: New methods for examining the personality-cognition link. In <em>Handbook of individual differences in cognition</em> (pp. 27–49). Springer.
 </div>
 <div class="csl-entry">
-Ripley, B. (2022). <em>MASS: Support functions and datasets for venables and ripley’s MASS</em>. <a href="http://www.stats.ox.ac.uk/pub/MASS4/">http://www.stats.ox.ac.uk/pub/MASS4/</a>
+Ripley, B., &amp; Venables, B. (2024). <em>MASS: Support functions and datasets for venables and ripley’s MASS</em>. <a href="http://www.stats.ox.ac.uk/pub/MASS4/">http://www.stats.ox.ac.uk/pub/MASS4/</a>
 </div>
 <div class="csl-entry">
-Rosseel, Y., Jorgensen, T. D., &amp; Rockwood, N. (2022). <em>Lavaan: Latent variable analysis</em>. <a href="https://lavaan.ugent.be">https://lavaan.ugent.be</a>
+Rosseel, Y., Jorgensen, T. D., &amp; De Wilde, L. (2024). <em>Lavaan: Latent variable analysis</em>. <a href="https://lavaan.ugent.be">https://lavaan.ugent.be</a>
 </div>
 <div class="csl-entry">
 Xie, Y. (2016). <em>Bookdown: Authoring books and technical documents with <span>R</span> markdown</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/bookdown">https://bookdown.org/yihui/bookdown</a>
@@ -299,8 +303,10 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "subsection"
-}
+"collapse": "section",
+"scroll_highlight": true
+},
+"toc_depth": 4
 });
 });
 </script>
