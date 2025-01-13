@@ -10,12 +10,13 @@
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Install the packages
-install.packages(c("DataExplorer", "ggcorrplot", "psych", "lavaan", "semPlot", 
+install.packages(c("DataExplorer", "ggcorrplot", "gridExtra", "psych", "lavaan", "semPlot", 
                    "ggplot2", "mirt", "MASS"))
 
 # Activate the required packages
 library("DataExplorer") # for data summarization
 library("ggcorrplot") # for creating correlation plots
+library("gridExtra") # for placing multiple plots into a grid
 library("psych") # for exploratory factor analysis
 library("lavaan") # for confirmatory factor analysis
 library("semPlot") # for creating path diagrams
@@ -69,6 +70,31 @@ print(efa.model2, sort = TRUE)
 # Visualize the model
 plot(efa.model2)
 
+# Define a custom function to visualize EFA results
+barplot_EFA <- function(model) {
+  require("ggplot2")
+  require("gridExtra")
+  
+  loadings <- model$loadings
+  
+  plots <- lapply(1:ncol(loadings), function(i) {
+    ggplot2::ggplot(data.frame(Variables = rownames(loadings), Loading = loadings[, i], Highlight = abs(loadings[, i]) >= 0.3), 
+                    aes(x = Variables, y = Loading, fill = Highlight)) +
+      ggplot2::geom_bar(stat = "identity", show.legend = FALSE) +
+      ggplot2::scale_fill_manual(values = c("TRUE" = "blue", "FALSE" = "lightgray")) +
+      ggplot2::ggtitle(paste("Factor", i)) +
+      ggplot2::theme_bw() +
+      ggplot2::theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      ggplot2::labs(caption = "Note: Blue bars represent loadings >= 0.3; Gray bars represent loadings < 0.3.") +
+      ggplot2::scale_y_continuous(limits = c(-1, 1), breaks = seq(-1, 1, by = 0.25))
+  })
+  
+  do.call(gridExtra::grid.arrange, c(plots, ncol = 2))
+}
+
+# Run the function for the two-factor model
+barplot_EFA(efa.model2)
+
 # Try four-factor EFA model --> nfactors=4
 efa.model4 <- psych::fa(sapa, nfactors = 4, rotate = "oblimin", fm = "ml", cor = "tet")
 
@@ -93,6 +119,10 @@ omega.model <- psych::omega(sapa, nfactors = 4, fm = "ml", poly = TRUE)
 
 # Print the results 
 print(omega.model)
+
+# Run EFA using my Shiny app
+shiny::runGitHub("EFA", "okanbulut")
+
 
 #............................Exercises...........................
 
